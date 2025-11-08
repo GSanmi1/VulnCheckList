@@ -10,18 +10,18 @@ In order to find potentials LSBOs on C code we go on the following steps:
 
 - First, a *Linear Stack Buffer Overflow* affects the overflow of contiguous memory structures in the stack, so the first thing we'll do is identify these structures in the code, specifically within a function:
 
-   -> Structs defined within the function itself.
-   -> Buffers or arrays defined within the function itself.
+   1. Structs defined within the function itself.
+   2. Buffers or arrays defined within the function itself.
 
 - Next, we'll review the function (and calls to other functions made by that function) to try to find write operations on these structures.
 
-   -> "Weakly-bounded functions" such as memcpy(), sprintf(), etc.
-   -> "for" loops, "while" loops, etc. where assignment operations or other operations are performed.
+   1. "Weakly-bounded functions" such as memcpy(), sprintf(), etc.
+   2. "for" loops, "while" loops, etc. where assignment operations or other operations are performed.
 
 Once these operations are located, we'll trace back the path to that operation in the function, focusing on finding:
 
-   -> Possible restrictions or sanitization operations that could halt the execution of the data copy operation on the structure. For example, an if statement that evaluates whether the size of the data to be copied cannot exceed the size of the destination structure.
-   -> The origin of the data being copied onto the structure and whether or not they are controlled by the user at any point along the path.
+   1. Possible restrictions or sanitization operations that could halt the execution of the data copy operation on the structure. For example, an if statement that evaluates whether the size of the data to be copied cannot exceed the size of the destination structure.
+   2. The origin of the data being copied onto the structure and whether or not they are controlled by the user at any point along the path.
 
 We define a Stack Buffer Overflow as a data transfer operation of user-controlled data onto a fixed-size structure in the stack without restrictions that limit said operation.
 
