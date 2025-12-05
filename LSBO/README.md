@@ -1,6 +1,6 @@
 ### Description.
 
-A *Linear Stack Buffer Overflow* is a vulnerability in which a contiguous fixed-size stack memory region gets stuffed with an amount of data bigger than the storage capacity of the structure resulting in the overwriting of adyacent memory regions.
+A *Linear Stack Buffer Overflow* is a vulnerability in which a contiguous fixed-size stack memory region gets stuffed with an amount of data bigger than the storage capacity of the structure resulting in the overwriting of adyacent memory regions. More information on the following [link](https://gsanmi1.github.io/2025-11-06-LSBO/)
 
 <br>
 

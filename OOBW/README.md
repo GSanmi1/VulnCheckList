@@ -4,7 +4,7 @@ An Out-Of-Bounds Write is a vulnerability whereby an attacker gains control over
 
 Sometimes an attacker can exploit this vulnerability further because, in addition to controlling the location being written to, they also control what is being written, escalating the vulnerability into a "what-where write" vulnerability, though this is not always the case.
 
-The key to this vulnerability is that, as a result of user control over a variable of any type in the code, data gets written outside the memory region intended for it, regardless of whether or not that asme data is also controlled by said user.
+The key to this vulnerability is that, as a result of user control over a variable of any type in the code, data gets written outside the memory region intended for it, regardless of whether or not that asme data is also controlled by said user. More information on the following [link](https://gsanmi1.github.io/2025-11-26-Out-Of-Bounds-Write/)
 
 <br>
 

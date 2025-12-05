@@ -33,6 +33,8 @@ To attempt to discover a heap buffer overflow, we must perform the following ste
 
 <br>
 
+More information on the following [link](https://gsanmi1.github.io/2025-11-18-HBO/)
+
 ### Examples
 
 Some examples could be:

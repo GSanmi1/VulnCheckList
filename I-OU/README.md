@@ -46,6 +46,7 @@ In summary:
 - Check whether mathematical operations involving user data exist and whether any sanitization is performed before or after the operation.
 - Observe what is done with the results of these operations and whether they could corrupt the code execution flow. Pay particular attention to under-allocations or over-copies as illustrated in the case above.
 
+More information on the following [link](https://gsanmi1.github.io/2025-12-05-IntegerOverflow-Underflow/)
 <br>
 
 ### Examples
