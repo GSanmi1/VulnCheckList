@@ -195,6 +195,8 @@ Classic Vulnerable Patterns:
     }
     ```
 
+    <br>
+
 9. **Unchecked Array Access**
 
     Finally, we present an especially important case where a for-loop with a user-controlled exit condition does not correctly check the number of times it accesses a buffer:
